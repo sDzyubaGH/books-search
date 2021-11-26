@@ -1,0 +1,64 @@
+.searchBar {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.sbForm {
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sbForm>button {
+  min-width: 100px;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid rgb(138, 138, 138);
+  background-color: inherit;
+  transition: box-shadow .3s ease;
+}
+
+.sbForm>button:hover {
+  box-shadow: 0 0 10px rgb(138, 138, 138), 0 0 10px rgb(138, 138, 138);
+}
+
+.sbForm>input {
+  width: 70%;
+  height: 100%;
+  min-width: 100px;
+  border-radius: 10px;
+  border: 1px solid rgb(138, 138, 138);
+  background-color: inherit;
+  padding: 10px;
+  color: #fff;
+  transition: box-shadow .3s ease;
+}
+
+.sbForm>input:focus {
+  box-shadow: 0 0 10px rgb(138, 138, 138), 0 0 10px rgb(138, 138, 138);
+}
+
+.options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.selectOptions {
+  margin-left: 10px;
+  background-color: inherit;
+  border: 1px solid rgb(138, 138, 138);
+  padding: 5px;
+  border-radius: 10px;
+  min-width: 105px;
+}
+
+.selectOptions:focus {
+  background-color: #2e2e2e;
+}
+
+option {
+  color: #fff;
+}

@@ -1,0 +1,50 @@
+.bookList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bookList > div > a {
+  text-decoration: none;
+}
+
+.bookList > div {
+  margin: 20px 10px;
+}
+
+.loadMore {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 25px;
+}
+
+.loadMore > button {
+  width: 150px;
+  height: 30px;
+  margin-right: 10%;
+  background-color: inherit;
+  border: 1px solid rgb(138, 138, 138);
+  border-radius: 10px;
+}
+
+.loadMore > button:hover {
+  border-color: #fff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.notFound {
+  text-align: center;
+}
+
+
+@media (max-width: 950px) {
+  .bookList {
+  grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .bookList {
+  grid-template-columns: 1fr;
+  }
+}
