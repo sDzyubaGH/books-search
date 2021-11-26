@@ -29,11 +29,10 @@ export default function CurBook(props) {
         setData(res)
       })
       .catch((e) => {
-        if (e.message) {
-          setNotFound(true)
+        setNotFound(true)
+        console.log(e.message)
 
-          return -1
-        }
+        return -1
       })
   }
 

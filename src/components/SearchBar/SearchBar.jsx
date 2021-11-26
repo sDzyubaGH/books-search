@@ -30,7 +30,7 @@ export default function SearchBar(props) {
   return (
     <div className={cl.searchBar}>
       <form className={cl.sbForm} onSubmit={formSubmit}>
-        <input id="bookName" type="text" placeholder="Book's name" />
+        <input autoComplete="off" id="bookName" type="text" placeholder="Book's name" />
         <button type="submit">Find</button>
       </form>
       <div className={cl.options}>

@@ -9,6 +9,7 @@ import Loading from '../UI/Loading/Loading'
 
 export default function Books() {
   const [isLoading, setIsLoading] = useState(false)
+
   const dispatch = useDispatch()
 
   const queryHandler = (query, sIndex = 0) => {
@@ -20,6 +21,12 @@ export default function Books() {
       })
       .then(res => {
         setIsLoading(false)
+
+        if (res.error) {
+          dispatch(setNotFound(true))
+          throw new Error(res.error.message)
+        }
+
         if (!res.items) {
           // При нажатии на load more
           if (sIndex) {
@@ -39,16 +46,16 @@ export default function Books() {
 
         if (sIndex) {
           dispatch(loadMoreBooks(res.items))
-          
+
           return 0
         }
 
         dispatch(addBooks(res.items))
         dispatch(setTotalItems(res.totalItems))
-      },
-        (err) => {
-          console.log(err)
-        })
+      })
+      .catch(e => {
+        console.log(e.message)
+      })
   }
 
   return (
